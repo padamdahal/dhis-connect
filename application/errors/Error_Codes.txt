@@ -1,0 +1,1 @@
+01 - unable to connect to database server with provided settings
