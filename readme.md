@@ -8,4 +8,4 @@ Procedure:
    
 3. Run setup.sh as root
    - sudo ./setup.sh (if you are on the same directory)
-   - sudo path/to/dhis-tracker-automation/setup.sh (if your are pwd is other than 'dhis-tracker-automation') 
+   - sudo path/to/dhis-tracker-automation/setup.sh (if your pwd is other than 'dhis-tracker-automation') 
