@@ -12,6 +12,11 @@ class Sms extends CI_Controller {
 
 		// Container for events;
 		$this->events = [];
+
+		// Access log
+    $myfile = fopen(FCPATH."/dhis-tracker-automation-access-log.txt", "a") or die("Unable to open file!");
+    fwrite($myfile, 'Last Accessed: '.date("Y-m-d H:i:s"));
+    fclose($myfile);
 	}
 
 	public function sendSMS($to, $message){
