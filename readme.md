@@ -1,4 +1,5 @@
-Procedure:
+# DHIS Tracker Automation
+## For National Tuberculosis Programme, Nepal
 
 1. Clone the repository in desired location
    - git clone https://github.com/padamdahal/dhis-tracker-automation.git
