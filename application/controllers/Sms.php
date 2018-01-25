@@ -15,7 +15,7 @@ class Sms extends CI_Controller {
 
 		// Access log
     $myfile = fopen(FCPATH."/dhis-tracker-automation-access-log.txt", "a") or die("Unable to open file!");
-    fwrite($myfile, 'Last Accessed: '.date("Y-m-d H:i:s"));
+    fwrite($myfile, 'Last Accessed [sms]: '.date("Y-m-d H:i:s")."\n");
     fclose($myfile);
 	}
 
