@@ -14,13 +14,13 @@
 ### Configuration
 Edit codeigniter config file
 
-// DHIS API details
-$config['dhis_url'] = 'http://localhost:8000/api/26/';  // Base DHIS2 API url
-$config['dhis_username'] = 'admin';       // DHIS Username here
-$config['dhis_password'] = 'district';    // DHIS password here
+- DHIS API details
+-- $config['dhis_url'] = 'http://localhost:8000/api/26/';  // Base DHIS2 API url
+-- $config['dhis_username'] = 'admin';       // DHIS Username here
+-- $config['dhis_password'] = 'district';    // DHIS password here
 
-// SMS service provider details
-$config['sms_get_url'] = '';
-$config['sms_send_url'] = 'url';   								// SMS send API url as provided
-$config['sms_token'] = 'abcdefghijkl';                          // Valid token to send SMS
-$config['sms_number'] = '12345';                                // Number used by SMS provider to send SMS
+- SMS service provider details
+-- $config['sms_get_url'] = '';
+-- $config['sms_send_url'] = 'url';   								// SMS send API url as provided
+-- $config['sms_token'] = 'abcdefghijkl';                          // Valid token to send SMS
+-- $config['sms_number'] = '12345';                                // Number used by SMS provider to send SMS
