@@ -6,6 +6,6 @@ Procedure:
 2. Set execute permission on setup.sh
    chmod +x path/to/dhis-tracker-automation/setup.sh
    
-3. Run setup.sh
-   - ./setup.sh (if you are on the same directory)
-   - path/to/dhis-tracker-automation/setup.sh (if your are pwd is other than 'dhis-tracker-automation') 
+3. Run setup.sh as root
+   - sudo ./setup.sh (if you are on the same directory)
+   - sudo path/to/dhis-tracker-automation/setup.sh (if your are pwd is other than 'dhis-tracker-automation') 
