@@ -9,6 +9,8 @@ fi
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # add a cron job for scheduler
+rm -f /etc/corn.d/dhis-automation
+
 touch /etc/cron.d/dhis-automation
 
 # Printing to file

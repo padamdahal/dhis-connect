@@ -9,6 +9,10 @@ class Scheduler extends CI_Controller {
 	}
 
 	public function Index(){
+		// Testing cron
+		$myfile = fopen("/home/ntc/crontest.txt", "w") or die("Unable to open file!");
+		fwrite($myfile, now());
+		fclose($myfile);
 		
 		$thisHost = gethostname();
 		echo $thisHost;
