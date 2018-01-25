@@ -1,5 +1,11 @@
 Procedure:
 
 1. Clone the repository in desired location
-2. run the command in terminal: bash setup.sh
-3. that's all
+   git clone https://github.com/padamdahal/dhis-tracker-automation.git
+   
+2. Set execute permission on setup.sh
+   chmod +x path/to/dhis-tracker-automation/setup.sh
+   
+3. Run setup.sh
+   - ./setup.sh (if you are on the same directory)
+   - path/to/dhis-tracker-automation/setup.sh (if your are pwd is other than 'dhis-tracker-automation') 
