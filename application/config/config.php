@@ -2,18 +2,18 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 // DHIS2 server config
-$config['dhis_url'] = 'http://localhost:8000/api/26/';
-$config['dhis_username'] = 'admin';
-$config['dhis_password'] = 'NtcDr@2dHIS';
+$config['dhis_url'] = 'http://localhost:8000/api/26/';  // Base DHIS2 API url
+$config['dhis_username'] = 'admin';       // DHIS Username here
+$config['dhis_password'] = 'district';    // DHIS password here
 
-// Sparrow SMS config
+// SMS service provider details
 $config['sms_get_url'] = '';
-$config['sms_send_url'] = 'http://api.sparrowsms.com/v2/sms/?';
-$config['sms_token'] = '1K00IZAK1gP3nsnie1ET';
-$config['sms_number'] = '36040';
+$config['sms_send_url'] = 'http://api.sparrowsms.com/v2/sms/?';   // SMS send API url as provided
+$config['sms_token'] = 'abcdefghijkl';                            // Valid token to send SMS
+$config['sms_number'] = '12345';                                  // Number used by SMS provider to send SMS
 
 // Other config
-$config['base_url'] = "http://".$_SERVER['SERVER_NAME'];
+$config['base_url'] = "";//http://".$_SERVER['SERVER_NAME']";
 $config['index_page'] = 'index.php?';
 $config['uri_protocol']	= 'REQUEST_URI';
 $config['url_suffix'] = '';

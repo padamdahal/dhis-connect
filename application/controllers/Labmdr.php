@@ -1,18 +1,18 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Scheduler extends CI_Controller {
+class Labmdr extends CI_Controller {
 	public function __construct(){
 		parent::__construct(); 
 		$this->load->helper('url');
 		$this->load->library('common');
-		$this->load->model('scheduler_model');
+		$this->load->model('labmdr_model');
 	}
 
 	public function Index(){
 		
 		$thisHost = gethostname();
 		echo $thisHost;
-			
+		exit('This is Lab MDR connector');
 		// today
 		$today = date(DATE_ISO8601);
 		$todayString = str_replace('+', '.', $today);

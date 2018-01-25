@@ -2,13 +2,14 @@
 
 class Sms extends CI_Controller {
 	public function __construct(){
-		parent::__construct(); 
+		parent::__construct();
 		$this->load->helper('url');
-		//$this->load->library('common');
 		$this->load->model('sms_model');
+
 		// today
 		$this->today = date(DATE_ISO8601);
 		$this->todayString = str_replace('+', '.', $this->today);
+
 		// Container for events;
 		$this->events = [];
 	}
@@ -132,14 +133,8 @@ class Sms extends CI_Controller {
 	}
 
 	public function index(){
-		// Check if the request is from localhost
-		$client_ip = $this->common->get_client_ip();
-		$whitelist = array('127.0.0.1', '::1');
-
-		// The request is not from same machine, exit
-		if(!in_array($client_ip, $whitelist)){
-			die('Not allowed');
-		}
+		$thisHost = gethostname();
+		echo $thisHost;
 
 		// get last logged date time
 		$last_log = $this->getLastLoggedDate();
@@ -156,7 +151,7 @@ class Sms extends CI_Controller {
 				foreach($attributes['attributes'] as $attribute){
 					if($attribute['displayName'] == 'Patient ID'){
 						$ev['patientId'] = $attribute['value'];
-					} 
+					}
 					if($attribute['displayName'] == 'Patient Name'){
 						$ev['patientName'] = $attribute['value'];
 					}
@@ -199,7 +194,7 @@ class Sms extends CI_Controller {
 							$dateLast = new DateTime($last_log);
 							if($data['result'] && ($dateLast->getTimestamp() < $lastUpdated->getTimestamp())){
 								$this->composeAndSendMessage($smsTemplate,$data);
-								//echo 'Gx : '.$data['result']; 
+								//echo 'Gx : '.$data['result'];
 							}
 						}
 
